@@ -107,135 +107,137 @@ html {
     font-size: 24px; } }
 
 body {
-  width: 100%;
-  height: 100%; }
+  background-color: #f5f6f7; }
 
 #wrapper {
   width: 100%;
   max-width: 640px;
   min-height: 320px;
-  height: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  background-color: #fff; }
+  height: auto;
+  margin: 0 auto; }
 
-.top {
-  position: absolute;
-  top: 3%;
-  right: 5%;
-  z-index: 1;
-  width: auto;
-  /*old*/
+.userHeader {
+  padding: 5%;
+  background-color: #f7ac1d; }
+  .userHeader h2 {
+    font: 0.85rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #fff;
+    text-align: center; }
+  .userHeader p {
+    font: 0.75rem/1.2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #fff;
+    text-align: center; }
+
+.head, .textList, .btnList {
   display: -webkit-box;
-  /*new*/
   display: -webkit-flex;
   display: flex;
-  /*old*/
   -webkit-box-pack: center;
   -webkit-box-align: center;
-  /*new*/
   justify-content: center;
   align-items: center; }
-  .top a {
-    margin: 0 .25rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 100%;
-    background: rgba(0, 0, 0, 0.2);
+  .head h1, .textList h1, .btnList h1 {
+    -webkit-flex: 1;
+    flex: 1;
+    font: 0.75rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #fff;
     text-align: center; }
-    .top a img {
-      width: 50%;
-      vertical-align: middle; }
+  .head a, .textList a, .btnList a {
+    width: 1rem;
+    display: block;
+    text-decoration: none; }
+    .head a img, .textList a img, .btnList a img {
+      width: 100%; }
 
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  width: 90%;
-  padding: 3%;
-  height: auto;
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: #fff;
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-  .container .item {
+.headDefault {
+  margin: 1rem auto .5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  overflow: hidden; }
+  .headDefault img {
+    width: 100%; }
+
+.textList {
+  padding: 1rem 0;
+  background-color: #fff; }
+  .textList > div {
+    -webkit-flex: 1;
+    flex: 1; }
+    .textList > div p {
+      font: 0.65rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #adacab;
+      text-align: center; }
+    .textList > div h3 {
+      font: bold 0.85rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #2f2f2c;
+      text-align: center; }
+
+.integral {
+  position: relative; }
+  .integral:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #eee; }
+  .integral:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: #eee; }
+
+.itemList {
+  margin-top: .5rem;
+  background-color: #fff; }
+  .itemList a {
     position: relative;
-    padding: .3rem 30px .3rem 0;
-    border-bottom: 1px solid #ddd;
+    padding: .3rem 5%;
+    display: block;
     height: auto;
-    overflow: hidden; }
-    .container .item:after {
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    text-decoration: none; }
+    .itemList a i {
+      float: left;
+      display: block;
+      width: 1rem; }
+      .itemList a i img {
+        width: 80%;
+        vertical-align: middle; }
+    .itemList a span {
+      display: block;
+      margin-left: 1.3rem;
+      font: 0.75rem/2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #2f2f2c; }
+    .itemList a:after {
       content: "";
       position: absolute;
       top: 50%;
-      right: 0;
-      width: 10px;
-      height: 10px;
+      right: 5%;
+      margin-top: -3px;
+      width: 6px;
+      height: 6px;
       border: 1px solid;
       border-bottom: 0;
       border-right: 0;
       color: #ccc;
-      -moz-transform: rotateZ(135deg) translate(0, 100%);
-      -o-transform: rotateZ(135deg) translate(0, 100%);
-      -ms-transform: rotateZ(135deg) translate(0, 100%);
-      -webkit-transform: rotateZ(135deg) translate(0, 100%);
-      transform: rotateZ(135deg) translate(0, 100%); }
+      -moz-transform: rotateZ(135deg);
+      -o-transform: rotateZ(135deg);
+      -ms-transform: rotateZ(135deg);
+      -webkit-transform: rotateZ(135deg);
+      transform: rotateZ(135deg); }
 
-.citySelect .cityName {
-  float: left;
-  font: 0.75rem/2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-  color: #2f2f2c; }
-
-.citySelect .citySelected {
-  float: right; }
-  .citySelect .citySelected .l {
-    float: left;
-    margin-left: .3rem;
-    width: .8rem; }
-    .citySelect .citySelected .l img {
-      width: 100%;
-      vertical-align: middle; }
-  .citySelect .citySelected span {
-    float: left;
-    margin-left: .3rem;
-    font: 0.7rem/1.5rem "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-    color: #a5a4a2; }
-
-.timeSelect ul {
-  float: left; }
-  .timeSelect ul li {
-    font: 0.75rem/2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-    color: #2f2f2c; }
-    .timeSelect ul li span {
-      color: #a5a4a2;
-      margin-left: .3rem; }
-
-.timeSelect .evening {
-  float: right;
-  font: 0.75rem/4 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-  color: #a5a4a2; }
-
-.search span {
-  font: 0.75rem/2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-  color: #a5a4a2; }
-
-.logo {
-  position: absolute;
-  left: 35%;
-  bottom: 10%;
-  z-index: 1;
-  width: 30%; }
-  .logo img {
-    width: 100%; }
-
-.submitBox {
-  margin-top: .5rem; }
-  .submitBox button {
+.btnList {
+  margin: .5rem 5%; }
+  .btnList button {
+    -webkit-flex: 1;
+    flex: 1;
     width: 100%;
     background: #ff9800;
     border: none;
@@ -244,3 +246,11 @@ body {
     color: #fff;
     color: #fff;
     border-radius: 5px; }
+    .btnList button:first-child {
+      margin-right: 2.5%;
+      border: 1px solid #ff9800; }
+    .btnList button:last-child {
+      margin-left: 2.5%;
+      background: #f5f6f7;
+      border: 1px solid #ff9800;
+      color: #ff9800; }
