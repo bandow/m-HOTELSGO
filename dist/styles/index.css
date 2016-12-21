@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2016-10-18
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 18px; }
+
+@media (min-device-width: 320px) {
+  html {
+    font-size: 18px; } }
+
+@media (min-device-width: 360px) {
+  html {
+    font-size: 20px; } }
+
+@media (min-device-width: 375px) {
+  html {
+    font-size: 21px; } }
+
+@media (min-device-width: 384px) {
+  html {
+    font-size: 21px; } }
+
+@media (min-device-width: 400px) {
+  html {
+    font-size: 22px; } }
+
+@media (min-device-width: 414px) {
+  html {
+    font-size: 23px; } }
+
+@media (min-device-width: 480px) {
+  html {
+    font-size: 26px; } }
+
+@media (min-device-width: 568px) {
+  html {
+    font-size: 28px; } }
+
+@media (min-device-width: 533px) {
+  html {
+    font-size: 28px; } }
+
+@media (min-device-width: 600px) {
+  html {
+    font-size: 30px; } }
+
+@media (min-device-width: 640px) {
+  html {
+    font-size: 24px; } }
+
+#wrapper {
+  width: 100%;
+  max-width: 640px;
+  min-height: 320px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff; }
+
+body {
+  width: 100%;
+  height: 100%; }
+
+.top {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  z-index: 1;
+  width: auto;
+  /*old*/
+  display: -webkit-box;
+  /*new*/
+  display: -webkit-flex;
+  display: flex;
+  /*old*/
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /*new*/
+  justify-content: center;
+  align-items: center; }
+  .top a {
+    margin: 0 .25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center; }
+    .top a img {
+      width: 50%;
+      vertical-align: middle; }
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 90%;
+  padding: 3%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #fff;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .container .item {
+    position: relative;
+    padding: .3rem 30px .3rem 0;
+    border-bottom: 1px solid #ddd;
+    height: auto;
+    overflow: hidden; }
+    .container .item:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border: 1px solid;
+      border-bottom: 0;
+      border-right: 0;
+      color: #ccc;
+      -moz-transform: rotateZ(135deg) translate(0, 100%);
+      -o-transform: rotateZ(135deg) translate(0, 100%);
+      -ms-transform: rotateZ(135deg) translate(0, 100%);
+      -webkit-transform: rotateZ(135deg) translate(0, 100%);
+      transform: rotateZ(135deg) translate(0, 100%); }
+
+.citySelect .cityName {
+  float: left;
+  font: 0.75rem/2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color: #2f2f2c; }
+
+.citySelect .citySelected {
+  float: right; }
+  .citySelect .citySelected .l {
+    float: left;
+    margin-left: .3rem;
+    width: .8rem; }
+    .citySelect .citySelected .l img {
+      width: 100%;
+      vertical-align: middle; }
+  .citySelect .citySelected span {
+    float: left;
+    margin-left: .3rem;
+    font: 0.7rem/1.5rem "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #a5a4a2; }
+
+.timeSelect ul {
+  float: left; }
+  .timeSelect ul li {
+    font: 0.75rem/2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #2f2f2c; }
+    .timeSelect ul li span {
+      color: #a5a4a2;
+      margin-left: .3rem; }
+
+.timeSelect .evening {
+  float: right;
+  font: 0.75rem/4 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color: #a5a4a2; }
+
+.search span {
+  font: 0.75rem/2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color: #a5a4a2; }
+
+.logo {
+  position: absolute;
+  left: 35%;
+  bottom: 10%;
+  z-index: 1;
+  width: 30%; }
+  .logo img {
+    width: 100%; }
+
+.submitBox {
+  margin-top: .5rem; }
+  .submitBox button {
+    width: 100%;
+    background: #ff9800;
+    border: none;
+    outline: none;
+    font: 0.75rem/2.4 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #fff;
+    color: #fff;
+    border-radius: 5px; }

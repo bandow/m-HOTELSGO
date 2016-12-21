@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="HOTELSGO酒店狗-中国最大的分享式酒店管理平台"/>
+<meta name="keywords" content="HOTELSGO酒店狗-中国最大的分享式酒店管理平台"/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>HOTELSGO酒店狗-中国最大的分享式酒店管理平台</title>
+<link rel="stylesheet" href="styles/index.css">
+<link rel="stylesheet" href="styles/lib/swiper-3.3.1.min.css">
+<style>
+	.swiper-pagination-bullet-active{background:#fff;}
+	.swiper-pagination-bullet{background:#fff;}
+	.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:30px;}
+</style>
+<body>
+<div class="wrapper" id="wrapper">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><img class="indexBg" src="images/index_bg1.jpg" alt="" /></div>
+	        <div class="swiper-slide"><img class="indexBg" src="images/index_bg2.jpg" alt="" /></div>
+	        <div class="swiper-slide"><img class="indexBg" src="images/index_bg3.jpg" alt="" /></div>
+	        <div class="swiper-slide"><img class="indexBg" src="images/index_bg4.jpg" alt="" /></div>
+	        <div class="swiper-slide"><img class="indexBg" src="images/index_bg5.jpg" alt="" /></div>
+	    </div>
+	    <div class="swiper-pagination"></div>
+	</div>
+	<div class="top">
+		<a href=""><img src="images/myAccount.png" alt="" /></a>
+		<a href=""><img src="images/order.png" alt="" /></a>
+	</div>
+	<div class="container">
+		<div class="citySelect item">
+			<div class="cityName">广州市</div>
+			<div class="citySelected">
+				<i class="l"><img src="images/city.png" alt="" /></i>
+				<span>城市选择</span>
+			</div>
+		</div>
+		<div class="timeSelect item">
+			<ul>
+				<li>12月10日<span>今天</span><span>入住</span></li>
+				<li>12月11日<span>明天</span><span>离店</span></li>
+			</ul>
+			<div class="evening">共1晚</div>
+		</div>
+		<div class="search item"><span>关键词/位置/酒店名</span></div>
+		<div class="submitBox"><button>搜索酒店</button></div>
+	</div>
+	<div class="logo">
+		<img src="images/index_logo.png" alt="" />
+	</div>
+</div>
+<!-- script begin -->
+<script src="scripts/lib/jquery-3.1.0.min.js"></script>
+<script src="scripts/lib/swiper-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+    	//控制图片高宽
+    	var winHeight=$(window).height(), winWidth=$(window).width();
+    	var maxWinWidth=640;
+    	if(maxWinHeight=>winHeight){
+    		$(".wrapper .indexBg").width(winWidth).height(winHeight);
+    	}else{
+    		$(".wrapper .indexBg").width(maxWinWidth);
+    	}
+	    
+	    //幻灯片
+		var mySwiper = new Swiper('.swiper-container',{
+			pagination : '.swiper-pagination',
+			loop : true,
+			autoplay: 5000,//可选选项，自动滑动
+		});
+    });
+</script>
+<!-- script end -->
+</body>
+</html>
