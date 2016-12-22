@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="HOTELSGO酒店狗-中国最大的分享式酒店管理平台"/>
+<meta name="keywords" content="HOTELSGO酒店狗-中国最大的分享式酒店管理平台"/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>HOTELSGO酒店狗-中国最大的分享式酒店管理平台</title>
+<link rel="stylesheet" href="styles/detailed.css">
+<link rel="stylesheet" href="styles/lib/swiper-3.3.1.min.css">
+<link rel="stylesheet" href="styles/lib/daterangepicker.css">
+<style>
+	.swiper-container-horizontal>.swiper-pagination-bullets, 
+	.swiper-pagination-custom, 
+	.swiper-pagination-fraction{
+		bottom: 20px;
+	    right: 20px;
+	    left: inherit;
+	    color: #fff;
+		color:#fff;
+		font: 0.75rem/1 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+		text-align:right;
+	}
+	.date-picker-wrapper {
+	  position: absolute;
+	  z-index: 1;
+	  border: none;
+	  background-color: #fff;
+	  padding: 0;
+	  font-size: 12px;
+	  line-height: 20px;
+	  color: #aaa;
+	  font-family: Arial,sans-serif;
+	  box-shadow: none;
+	  box-sizing: initial;
+	  overflow-y: auto; }
+
+	.date-picker-wrapper .month-wrapper table .day.lalala {
+	  background-color: orange; }
+
+	.options {
+	  display: none;
+	  border-left: 6px solid #8ae;
+	  padding: 10px;
+	  font-size: 12px;
+	  line-height: 1.4;
+	  background-color: #eee;
+	  border-radius: 4px; }
+
+	.date-picker-wrapper.date-range-picker19 .day.first-date-selected {
+	  background-color: red !important; }
+
+	.date-picker-wrapper.date-range-picker19 .day.last-date-selected {
+	  background-color: orange !important; }
+
+	.date-picker-wrapper .month-wrapper table {
+	  width: 100% !important;
+	  border-top: 1px solid #f2f2f2; }
+
+	.date-picker-wrapper.no-shortcuts {
+	  padding-bottom: 0; }
+
+	.date-picker-wrapper .month-wrapper {
+	  border: none;
+	  border-radius: 0;
+	  background-color: #fff;
+	  padding: 0;
+	  cursor: default;
+	  position: absolute;
+	  bottom: 0;
+	  height: 60%;
+	  overflow-y: auto;
+	  padding-top: 5%; }
+
+	.date-picker-wrapper .month-wrapper2 {
+	  -webkit-overflow-scrolling: touch; }
+
+	.date-picker-wrapper .month-wrapper table th, .date-picker-wrapper .month-wrapper table td {
+	  width: 14.2857143%;
+	  padding: .5% 1%;
+	  -webkit-box-sizing: border-box;
+	  /*Safari3.2+*/
+	  box-sizing: border-box; }
+
+	.date-picker-wrapper .drp_top-bar {
+	  position: absolute;
+	  padding: 0;
+	  left: 0;
+	  width: 100%;
+	  top: 32vh;
+	  height: 8vh;
+	  background: #f2f2f2;
+	  line-height: 8vh; }
+
+	.date-picker-wrapper .drp_top-bar .apply-btn.disabled, .date-picker-wrapper .drp_top-bar .apply-btn {
+	  border: 0;
+	  background: none;
+	  display: block;
+	  height: 8vh;
+	  top: 0;
+	  right: 20px;
+	  color: #333; }
+
+	.date-picker-wrapper .month-name {
+	  color: #000;
+	  font-size: 14px; }
+
+	.date-picker-wrapper .drp_top-bar .default-top, .date-picker-wrapper .drp_top-bar.normal .normal-top {
+	  text-align: center;
+	  color: #333;
+	  font-weight: bold; }
+
+	.date-picker-wrapper .selected-days {
+	  font-weight: bold;
+	  font-size: 14px;
+	  font-style: normal; }
+
+	.date-picker-wrapper .month-wrapper table .week-name {
+	  height: 50px;
+	  line-height: 50px; }
+
+	.date-picker-wrapper table .caption {
+	  height: 50px; }
+
+	.date-picker-wrapper .month-wrapper table .day.checked {
+	  background-color: #008077; }
+
+	.date-picker-wrapper .month-wrapper table .day.toMonth.valid.checked {
+	  color: #fff;
+	  cursor: pointer; }
+
+	.date-picker-wrapper .month-wrapper table .day.real-today {
+	  background-color: transparent; }
+
+	.date-picker-wrapper .month-wrapper table .day {
+	  line-height: 30px;
+	  font-size: 14px; 
+	}
+</style>
+<body>
+<div class="wrapper" id="wrapper">
+    <header class="detailedHeader">
+    	<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide"><img src="images/hotel-list01.jpg" alt="" /></div>
+		        <div class="swiper-slide"><img src="images/hotel-list01.jpg" alt="" /></div>
+		        <div class="swiper-slide"><img src="images/hotel-list01.jpg" alt="" /></div>
+		        <div class="swiper-slide"><img src="images/hotel-list01.jpg" alt="" /></div>
+		        <div class="swiper-slide"><img src="images/hotel-list01.jpg" alt="" /></div>
+		    </div>
+		    <div class="swiper-pagination"></div>
+		</div>
+		<div class="top">
+			<a href="javascript:history.go(-1)"><img src="images/black_arrow.png" alt="" /></a>
+			<a href="javascript:;"><img src="images/list_collect.png" alt="" /></a>
+		</div>
+		<h1>广州市喜来登大酒店</h1>
+    </header>
+    <div class="container">
+        <div class="detailedTop">
+        	<a href="comment.html">		
+	    		<div class="star">
+	    		    <span>4.8分</span>
+					<ul class="star4"></ul>
+				</div>
+				<div class="allComment"><p>2158条评价</p></div>
+	    	</a>
+	    	<a href="#">
+	    	    <div class="address"><p>位于五羊新城商圈，越秀区共和路12号-5（杨箕地铁站F出口）</p></div>
+	    		<div class="map"><p>地图</p></div>	
+	    	</a>
+	    	<a class="equipmentClick" href="javascript:;">
+	    		<div class="equipment">
+	    			<p>酒店设备</p>
+	    			<div class="equipmentIcon">
+	    			   <i><img src="images/small_wifi.png" alt=""></i>
+	    			   <i><img src="images/small_air-conditioning.png" alt=""></i>
+	    			   <i><img src="images/small_hot-water.png" alt=""></i>
+	    			   <i><img src="images/small_teahouse.png" alt=""></i>
+	    			   <i><img src="images/small_Toiletries.png" alt=""></i>
+	    			   <i><img src="images/small_tv.png" alt=""></i>
+	    			</div>
+	    		</div>
+	    		<div class="installation">
+	    			<p>简介/设施</p>
+	    		</div>
+	    	</a>
+        </div>
+    	<div class="detailedFoot">
+    		<div class="date" id="date">
+    			<div class="timer">
+    			   <i><img src="images/date_icon.png" alt=""></i>
+    			   <span class="check-in-day" id="checkInDay"></span>
+    			   <span>/</span>
+    			   <span class="check-out-day" id="checkOutDay"></span>
+    			</div>
+    			<p>共<strong id="num">1</strong>晚</p>
+    		</div>
+    		<ul class="detailedList">
+    			<li>
+    				<div class="img"><img src="images/detailed01.png" alt=""></div>
+    				<div class="name">
+    					<h3>标准大床房</h3>
+    					<p>16-20m²/大床1.2米/有窗</p>
+    				</div>
+    				<div class="momey"><p>￥488</p></div>
+    				<div class="booking"><a href="">预定</a></div>
+    			</li>
+    			<li>
+    				<div class="img"><img src="images/detailed01.png" alt=""></div>
+    				<div class="name">
+    					<h3>标准大床房</h3>
+    					<p>16-20m²/大床1.2米/有窗</p>
+    				</div>
+    				<div class="momey"><p>￥488</p></div>
+    				<div class="booking"><a href="">预定</a></div>
+    			</li>
+    			<li>
+    				<div class="img"><img src="images/detailed01.png" alt=""></div>
+    				<div class="name">
+    					<h3>标准大床房</h3>
+    					<p>16-20m²/大床1.2米/有窗</p>
+    				</div>
+    				<div class="momey"><p>￥488</p></div>
+    				<div class="booking"><a href="">预定</a></div>
+    			</li>
+    		</ul>
+    	</div>
+    </div>
+</div>
+<div class="equipmentContainer">
+    <div class="container">
+    	<h2>广州市喜来登大酒店</h2>
+		<div class="iconList">
+			<p>设施</p>
+			<dl>
+				<dd><i><img src="images/big_wifi.png" alt=""></i><span>wifi</span></dd>
+				<dd><i><img src="images/big_air-conditioning.png" alt=""></i><span>空调</span></dd>
+				<dd><i><img src="images/big_hot-water.png" alt=""></i><span>淋浴</span></dd>
+				<dd><i><img src="images/big_teahouse.png" alt=""></i><span>茶水</span></dd>
+				<dd><i><img src="images/big_Toiletries.png" alt=""></i><span>洗漱用品</span></dd>
+				<dd><i><img src="images/big_tv.png" alt=""></i><span>电视机</span></dd>
+			</dl>
+		</div>
+		<div class="content">
+			<h3>酒店简介</h3>
+			<p>在繁忙的观光旅行和工作之余，粤海喜来登酒店将是您放松身心、焕发活力的完美天堂。酒店设施齐全，让您享受温馨舒适的同时，还可随时与外界保持联络。</p>
+	        <p>我们的喜来登健身拥有设施完备的健身房、蒸汽室和桑拿室，开放时间为每天早上 6:30 至晚上11:00。此外还定期开设有氧运动和瑜珈课程。我们的室外恒温泳池开放时间为早上 6:30 至晚上 10:00。</p>
+		</div>
+    </div>
+	<a class="close" href="javascript:;"><img src="images/colse.png" alt=""></a>
+</div>
+<!-- script begin -->
+<script src="scripts/lib/jquery-1.12.2.min.js"></script>
+<script src="scripts/lib/swiper-3.3.1.min.js"></script>
+<script src="scripts/lib/moment.min.js"></script>
+<script src="scripts/lib/jquery.daterangepicker.js"></script>
+<script>
+    $(document).ready(function(){
+
+	    //幻灯片
+		var mySwiper = new Swiper('.swiper-container',{
+			pagination : '.swiper-pagination',
+			loop : true,
+			autoplay: 5000,//可选选项，自动滑动
+			paginationType: 'fraction',
+		});
+
+		//日历
+		var myDate = new Date();
+		var y=myDate.getFullYear();
+	    var m=myDate.getMonth()+1;
+	    var day=myDate.getDate();
+	    var hDay=myDate.getDate()+1;
+	    
+	    //初始化当天时间
+	    $(".check-in-day").html(y+"-"+m+"-"+day);
+	    $(".check-out-day").html(y+"-"+m+"-"+hDay);
+
+	    //初始化1晚
+	    var num=$("#checkInDay").html()-$("#checkOutDay").html();
+	    $("#num").html(num);
+	    $("#num").html("1"); 
+
+	    $('#date').dateRangePicker(
+	      {
+	        startDate: new Date(),  //默认今天开始
+	        getValue: function()    //选择开始和结束的日期
+	        {
+	          if ($('#checkInDay').html() && $('#checkOutDay').html() )
+	            return $('#checkInDay').html() + ' to ' + $('#checkOutDay').html();
+	          else
+	            return '';
+	        },
+	        setValue: function(s,s1,s2)  //回调页面上
+	        {
+	          $('#checkInDay').html(s1);
+	          $('#checkOutDay').html(s2);
+	        },
+	        showDateFilter: function(time, date)   //显示价格
+	        {   
+	         var html='<div style="padding:0 5px;">';
+	             html+='<span style="font-size:14px;">'+date+'</span>';
+	             html+='<div style="opacity:1;"></div>';
+	             html+='</div>';
+	          return html;
+	        },
+	        showShortcuts:false,   //去掉快捷html
+	        inline:false,
+	        singleMonth:false,  //true显示1个月，false为2个月
+	        batchMode:true,
+	        stickyMonths:true, //如果是true，只会有一个以前和一个下一个按钮。点击他们将改变两个月。
+	        // extraClass:'dengcb',  //添加class
+	        showTopbar:true,     //true显示确定按钮 false不显示确定按钮选择好就确定
+	        selectForward:false,   //true选择开始的时间前面就不能选，默认false
+	        selectBackward:false,  //true只能选择1天     
+	    });
+
+	    //
+	    $(".equipmentClick").on("click",function(){
+	    	$(".equipmentContainer").addClass("equipmentActive");
+	    });
+	    $(".close").on("click",function(){
+	    	$(".equipmentContainer").removeClass("equipmentActive");
+	    });
+    });
+</script>
+<!-- script end -->
+</body>
+</html>
