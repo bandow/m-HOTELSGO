@@ -25,8 +25,8 @@ body{
     	-webkit-flex:1;
     	flex:1;
     	font:.75rem/2.4rem $publicFont;
-        color:$colorBlack;
-        text-align:center;
+      color:$colorBlack;
+      text-align:center;
     }
     a{
     	width:1rem;
@@ -116,10 +116,10 @@ body{
 	    align-items:center;
     	ul{
     		width: 4rem;
-            height: .7rem;
+        height: .7rem;
     		background:url("../images/star.png") no-repeat;
-			background-size:100% 100%;
-			overflow:hidden;
+			  background-size:100% 100%;
+			  overflow:hidden;
     	}
     	.star0{
     		background:url("../images/star0.png") no-repeat;

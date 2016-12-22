@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content="HOTELSGO酒店狗-中国最大的分享式酒店管理平台"/>
+	<meta name="keywords" content="HOTELSGO酒店狗-中国最大的分享式酒店管理平台"/>
+	<meta name="author" content="name, sycbbb@sina.com"/>
+	<meta name="robots" content="index,follow"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+	<meta name="msapplication-tap-highlight" content="no">
+	<title>HOTELSGO酒店狗-支付</title>
+	<link rel="stylesheet" href="styles/order.css">
+</head>
+<body>
+	<div class="wrapper" id="wrapper">
+		<header class="payHeader">
+		    <div class="head">
+		    	<a href="javascript:history.go(-1)"><img src="images/yellow_arrow.png" alt=""></a>
+				<h1>支付</h1>
+		    </div>
+		</header>
+		<div class="container">
+            <div class="payName">
+            	<h3>广州市喜来登大酒店</h3>
+            	<p>入住: 12月10日(今天)  离店: 12月11日(明天)  共1晚</p>
+            	<p>标准大床房  无早</p>
+            </div>
+            <div class="payItem">
+            	<div class="item" href="">
+            	    <i><img src="images/pay.png" alt=""></i>
+            		<p>储值余额<span>￥104012</span></p>
+            		<i class="select"></i>
+            	</div>
+            	<div  class="item" href="">
+            		<i><img src="images/payWechat.png" alt=""></i>
+            		<p>微信支付</p>
+            		<i class="select"></i>
+            	</div>
+            	<div  class="item" href="">
+            		<i><img src="images/payAli.png" alt=""></i>
+            		<p>支付宝支付</p>
+            		<i class="select"></i>
+            	</div>
+            </div>
+		</div>
+		<div class="payFooter">
+			<div class="money"><p>支付金额<span>￥488</span></p></div>
+			<div class="submit"><a href="javascript:;">确定支付</a></div>
+		</div>
+	</div>
+	<script src="scripts/lib/jquery-1.12.2.min.js"></script>
+	<script>
+		$(".select").on("click",function(){
+            $(this).parent().addClass("on").siblings().removeClass("on");
+		});	
+	</script>
+</body>
+</html>

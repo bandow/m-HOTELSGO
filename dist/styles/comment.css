@@ -1,0 +1,240 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2016-10-18
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 18px; }
+
+@media (min-device-width: 320px) {
+  html {
+    font-size: 18px; } }
+
+@media (min-device-width: 360px) {
+  html {
+    font-size: 20px; } }
+
+@media (min-device-width: 375px) {
+  html {
+    font-size: 21px; } }
+
+@media (min-device-width: 384px) {
+  html {
+    font-size: 21px; } }
+
+@media (min-device-width: 400px) {
+  html {
+    font-size: 22px; } }
+
+@media (min-device-width: 414px) {
+  html {
+    font-size: 23px; } }
+
+@media (min-device-width: 480px) {
+  html {
+    font-size: 26px; } }
+
+@media (min-device-width: 568px) {
+  html {
+    font-size: 28px; } }
+
+@media (min-device-width: 533px) {
+  html {
+    font-size: 28px; } }
+
+@media (min-device-width: 600px) {
+  html {
+    font-size: 30px; } }
+
+@media (min-device-width: 640px) {
+  html {
+    font-size: 24px; } }
+
+body {
+  background-color: #f5f6f7; }
+
+#wrapper {
+  width: 100%;
+  max-width: 640px;
+  min-height: 320px;
+  height: auto;
+  margin: 0 auto; }
+
+.commentHeader {
+  padding: 3% 5%;
+  background-color: #fff;
+  border-bottom: 1px solid #DCDCDC; }
+
+.head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  align-items: center; }
+  .head h1 {
+    -webkit-flex: 1;
+    flex: 1;
+    font: 0.75rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #000;
+    text-align: center; }
+  .head a {
+    width: 1rem;
+    display: block;
+    text-decoration: none; }
+    .head a img {
+      width: 100%; }
+
+.starCenter {
+  padding: 1rem 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eee; }
+  .starCenter h3 {
+    margin-bottom: .5rem;
+    text-align: center;
+    font: 0.7rem/1 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #f7ac1d; }
+    .starCenter h3 span {
+      font-size: .85rem; }
+  .starCenter ul {
+    margin: 0 auto;
+    width: 6rem;
+    height: 1rem;
+    overflow: hidden; }
+  .starCenter .bigStar0 {
+    background: url("../images/star0.png") no-repeat;
+    background-size: 100% 100%; }
+  .starCenter .bigStar1 {
+    background: url("../images/star1.png") no-repeat;
+    background-size: 100% 100%; }
+  .starCenter .bigStar2 {
+    background: url("../images/star2.png") no-repeat;
+    background-size: 100% 100%; }
+  .starCenter .bigStar3 {
+    background: url("../images/star3.png") no-repeat;
+    background-size: 100% 100%; }
+  .starCenter .bigStar4 {
+    background: url("../images/star4.png") no-repeat;
+    background-size: 100% 100%; }
+  .starCenter .bigStar5 {
+    background: url("../images/star5.png") no-repeat;
+    background-size: 100% 100%; }
+
+.commentList {
+  position: relative;
+  padding: .5rem;
+  background-color: #fff;
+  border-bottom: 1px solid #DCDCDC; }
+  .commentList .img {
+    float: left;
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    border-radius: 100%; }
+    .commentList .img img {
+      width: 100%; }
+  .commentList .text {
+    margin-left: 2.5rem; }
+    .commentList .text h4 {
+      font: 0.75rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #2F2E2B; }
+    .commentList .text .grade {
+      padding: .3rem 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center; }
+      .commentList .text .grade span {
+        margin-right: .3rem;
+        display: block;
+        font: 0.65rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        color: #A09F9D; }
+      .commentList .text .grade ul {
+        width: 4rem;
+        height: .7rem;
+        overflow: hidden; }
+      .commentList .text .grade .star0 {
+        background: url("../images/star0.png") no-repeat;
+        background-size: 100% 100%; }
+      .commentList .text .grade .star1 {
+        background: url("../images/star1.png") no-repeat;
+        background-size: 100% 100%; }
+      .commentList .text .grade .star2 {
+        background: url("../images/star2.png") no-repeat;
+        background-size: 100% 100%; }
+      .commentList .text .grade .star3 {
+        background: url("../images/star3.png") no-repeat;
+        background-size: 100% 100%; }
+      .commentList .text .grade .star4 {
+        background: url("../images/star4.png") no-repeat;
+        background-size: 100% 100%; }
+      .commentList .text .grade .star5 {
+        background: url("../images/star5.png") no-repeat;
+        background-size: 100% 100%; }
+    .commentList .text p {
+      font: 0.75rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #2F2E2B; }
+  .commentList .time {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font: 0.65rem/1 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #A09F9D; }
