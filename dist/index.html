@@ -149,7 +149,7 @@
 	</div>
 	<div class="top">
 		<a href="user.html"><img src="images/myAccount.png" alt="" /></a>
-		<a href="hotelList.html"><img src="images/order.png" alt="" /></a>
+		<a href="#"><img src="images/order.png" alt="" /></a>
 	</div>
 	<div class="container">
 		<div class="citySelect item">
@@ -175,7 +175,7 @@
 			<div class="evening">共<strong id="num">1</strong>晚</div>
 		</div>
 		<div class="search item"><span>关键词/位置/酒店名</span></div>
-		<div class="submitBox"><button>搜索酒店</button></div>
+		<div class="submitBox"><button onclick="javascript:goHoteList();">搜索酒店</button></div>
 	</div>
 	<div class="logo">
 		<img src="images/index_logo.png" alt="" />
@@ -253,8 +253,10 @@
 	        selectForward:false,   //true选择开始的时间前面就不能选，默认false
 	        selectBackward:false,  //true只能选择1天     
 	    });
- 
     });
+    function goHoteList(){
+    	window.location.href="hotelList.html";
+    }
 </script>
 <!-- script end -->
 </body>
