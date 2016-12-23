@@ -45,9 +45,9 @@
             		<p>联系手机</p>
             		<p>13866668888</p>
             	</a>
-            	<a class="item couponItem" href="javascript:goCoupon();">
+            	<a class="item couponItem" href="javascript:;">
             		<p>优惠券</p>
-            		<p>已抵扣￥20</p>
+            		<p class="couponItemText">已抵扣￥20</p>
             	</a>
             </div>
             <div class="orderText">
@@ -62,12 +62,80 @@
 			<div class="money"><p>支付金额<span>￥488</span></p></div>
 			<div class="detail"><p>价格明细</p></div>
 			<div class="submit"><a href="javascript:goPay();">提交订单</a></div>
+			<div class="itemised">
+				<h3>费用明细</h3>
+                <ul>
+                	<li><span>2016-12-23</span><span>标准大床房*1</span><span>248</span></li>
+                	<li><span>2016-12-23</span><span>标准大床房*1</span><span>248</span></li>
+                </ul>
+				<p>总额：<span>￥248</span></p>
+				<p>支付总额：<span>￥248</span></p>
+				<a class="close" href="javascript:;"><img src="images/colse.png" alt=""></a>
+			</div>
 		</div>
 	</div>
+	<div class="wrapperCoupon" id="wrapperCoupon">
+		<header class="couponHeader">
+		    <div class="head">
+		    	<a href="javascript:;"><img src="images/yellow_arrow.png" alt=""></a>
+				<h1>选择优惠券</h1>
+		    </div>
+		</header>
+		<div class="container couponContainer">
+		   <div class="noCoupon"><p>不使用优惠券</p><i class="select"></i></div> 
+		   <div class="couponList">
+		      <div class="top">
+	      		<em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em>
+		      </div>
+		   	  <p>￥<span>35.00</span></p>
+		   	  <div class="orderDade">
+		   	  	<p>使用范围: 广州可用</p>
+		   	  	<p>有效时间: 10-01 至 12-30</p>
+		   	  </div>
+		   	  <i class="select"></i>
+		   </div>
+		   <div class="couponList">
+		      <div class="top"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+		   	  <p>￥<span>12.00</span></p>
+		   	  <div class="orderDade">
+		   	  	<p>使用范围: 广州可用</p>
+		   	  	<p>有效时间: 10-01 至 12-30</p>
+		   	  </div>
+		   	  <i class="select"></i>
+		   </div>
+		   <div class="couponList">
+		      <div class="top"><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em><em></em></div>
+		   	  <p>￥<span>100.00</span></p>
+		   	  <div class="orderDade">
+		   	  	<p>使用范围: 广州可用</p>
+		   	  	<p>有效时间: 10-01 至 12-30</p>
+		   	  </div>
+		   	  <i class="select"></i>
+		   </div>
+		</div>
+	</div>
+	<script src="scripts/lib/jquery-1.12.2.min.js"></script>
 	<script>
-		function goCoupon(){
-	    	window.location.href="coupon.html";
-	    }
+	    $(document).ready(function(){
+           $(".detail").on("click",function(){
+               $(".itemised").addClass("itemisedActive");
+           });
+           $(".close").on("click",function(){
+               $(".itemised").removeClass("itemisedActive");
+           });
+
+           //优惠券
+           $(".couponItem").on("click",function(){
+               $(".wrapperCoupon").addClass("wrapperCouponActive");
+           });
+           $(".couponHeader a").on("click",function(){
+               $(".wrapperCoupon").removeClass("wrapperCouponActive");
+           });
+           $(".select").on("click",function(){
+	            $(this).parent().addClass("active").siblings().removeClass("active");
+	            $(".wrapperCoupon").removeClass("wrapperCouponActive");
+			});	
+	    });
 	    function goPay(){
 	    	window.location.href="pay.html";
 	    }

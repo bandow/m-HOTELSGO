@@ -156,12 +156,82 @@ body{
 	        outline: none;
 	        font:.75rem/2.4rem $publicFont;
 	        color:$colorWhite; 
-	        color:#fff;
     	}
+    }
+    .itemised{
+        position:absolute;
+        left:0;
+        bottom:0;
+        z-index:1;
+        padding:2% 5% 20% 5%;
+        width:100%;
+        height:auto;
+        border-top:1px solid #eee;
+        overflow:auto;
+        background-color:rgba(0,0,0,.8);
+        @include transform(translate(-100%,0));
+        @include transition(all .5s);
+        h3{
+            margin-bottom:.5rem;
+            font:.75rem/1.5 $publicFont;
+            color:$colorWhite; 
+        }
+        ul{
+            li{
+               padding:.2rem 0;
+               border-bottom:1px solid #666; 
+               span{
+                   font:.7rem/1.5 $publicFont;
+                   color:$colorWhite; 
+                   margin-right:.5rem;
+                   &:last-child{
+                     float:right;
+                     margin-right:0;
+                   }
+               }
+            }
+        }
+        p{
+            font:.7rem/1.5 $publicFont;
+            color:$colorWhite; 
+            text-align:right;
+            span{
+                color:#F7AC1D;
+            }
+        }
+        .close{
+            position:absolute;
+            left:50%;
+            bottom:5%;
+            display:block;
+            width:1rem;
+            height:1rem;
+            @include transform(translate(-50%, 0));
+            img{
+                width:100%;
+            }
+        }
+    }
+    .itemisedActive{
+        @include transform(translate(0,0));
     }
 }
 
 // coupon
+.wrapperCoupon{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background:$colorWhite;
+    @include transform(translate(-100%, 0));
+    @include transition(all .5s);
+}
+.wrapperCouponActive{
+    @include transform(translate(0, 0));
+}
 .couponHeader{
 	@extend .orderHeader;
 }

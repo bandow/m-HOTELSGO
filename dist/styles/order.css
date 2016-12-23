@@ -244,8 +244,94 @@ body {
       border: none;
       outline: none;
       font: 0.75rem/2.4rem "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-      color: #fff;
       color: #fff; }
+  .orderFooter .itemised, .payFooter .itemised {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 2% 5% 20% 5%;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #eee;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    -moz-transform: translate(-100%, 0);
+    -o-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
+    .orderFooter .itemised h3, .payFooter .itemised h3 {
+      margin-bottom: .5rem;
+      font: 0.75rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #fff; }
+    .orderFooter .itemised ul li, .payFooter .itemised ul li {
+      padding: .2rem 0;
+      border-bottom: 1px solid #666; }
+      .orderFooter .itemised ul li span, .payFooter .itemised ul li span {
+        font: 0.7rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        color: #fff;
+        margin-right: .5rem; }
+        .orderFooter .itemised ul li span:last-child, .payFooter .itemised ul li span:last-child {
+          float: right;
+          margin-right: 0; }
+    .orderFooter .itemised p, .payFooter .itemised p {
+      font: 0.7rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #fff;
+      text-align: right; }
+      .orderFooter .itemised p span, .payFooter .itemised p span {
+        color: #F7AC1D; }
+    .orderFooter .itemised .close, .payFooter .itemised .close {
+      position: absolute;
+      left: 50%;
+      bottom: 5%;
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      -moz-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0); }
+      .orderFooter .itemised .close img, .payFooter .itemised .close img {
+        width: 100%; }
+  .orderFooter .itemisedActive, .payFooter .itemisedActive {
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+.wrapperCoupon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: #fff;
+  -moz-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+
+.wrapperCouponActive {
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0); }
 
 .noCoupon {
   margin: .5rem 0;

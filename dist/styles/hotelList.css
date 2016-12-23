@@ -250,3 +250,13 @@ body {
     -webkit-flex: 1;
     flex: 1;
     text-align: right; }
+
+#scroll {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 1;
+  width: 1.5rem;
+  height: 1.5rem; }
+  #scroll img {
+    width: 100%; }
