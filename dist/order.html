@@ -29,22 +29,24 @@
             	<p>标准大床房  无早</p>
             </div>
             <div class="orderItem">
-            	<a class="item" href="">
+            	<a class="item roomQuantity" href="javascript:;">
             		<p>房间数</p>
-            		<p>1间</p>
+            		<p class="quantity">1间</p>
             	</a>
-            	<a  class="item" href="">
+            	<a  class="item roomTime" href="javascript:;">
             		<p>留房时间</p>
-            		<p>18:00</p>
+            		<p class="time">18:00</p>
             	</a>
-            	<a href="">
+            	<div>
             		<p>入住人</p>
-            		<p>范小白</p>
-            	</a>
-            	<a href="">
+            		<p><input type="text" placeholder="范小白"></p>
+            		<!-- <p>范小白</p> -->
+            	</div>
+            	<div>
             		<p>联系手机</p>
-            		<p>13866668888</p>
-            	</a>
+            		<p><input type="tel" placeholder="13866668888"></p>
+            		<!-- <p>13866668888</p> -->
+            	</div>
             	<a class="item couponItem" href="javascript:;">
             		<p>优惠券</p>
             		<p class="couponItemText">已抵扣￥20</p>
@@ -73,6 +75,21 @@
 				<a class="close" href="javascript:;"><img src="images/colse.png" alt=""></a>
 			</div>
 		</div>
+	</div>
+	<div class="roomMask mask">
+		<ul>
+			<li class="active">1间</li>
+			<li>2间</li>
+			<li>3间</li>
+		</ul>
+	</div>
+	<div class="timeMask mask">
+		<ul>
+		    <li class="active">18:00</li>
+			<li>19:00</li>
+			<li>20:00</li>
+			<li>21:00</li>
+		</ul>
 	</div>
 	<div class="wrapperCoupon" id="wrapperCoupon">
 		<header class="couponHeader">
@@ -117,12 +134,36 @@
 	<script src="scripts/lib/jquery-1.12.2.min.js"></script>
 	<script>
 	    $(document).ready(function(){
+	       //价格明细
            $(".detail").on("click",function(){
                $(".itemised").addClass("itemisedActive");
            });
            $(".close").on("click",function(){
                $(".itemised").removeClass("itemisedActive");
            });
+
+           //选择房数、选择时间
+           $(".roomQuantity").on("click",function(){
+               $(".roomMask").addClass("roomMaskActive");
+           });
+           $(".roomMask li").on("click",function(){
+               $(this).addClass("active").siblings().removeClass("active");
+               $(".quantity").text($(this).text());
+               $(".roomMask").removeClass("roomMaskActive");
+           });
+           $(".roomTime").on("click",function(){
+               $(".timeMask").addClass("timeMaskActive");
+           });
+           $(".timeMask li").on("click",function(){
+               $(this).addClass("active").siblings().removeClass("active");
+               $(".time").text($(this).text());
+               $(".timeMask").removeClass("timeMaskActive");
+           });
+           $(".mask").on("click",function(){
+               $(".roomMask").removeClass("roomMaskActive");
+               $(".timeMask").removeClass("timeMaskActive");
+           });
+
 
            //优惠券
            $(".couponItem").on("click",function(){

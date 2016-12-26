@@ -28,7 +28,8 @@ body {
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+a,
+.orderItem > div, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -136,11 +137,11 @@ body {
     font: 0.75rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
     color: #000;
     text-align: center; }
-  .head a {
+  .head a, .head .orderItem > div {
     width: 1rem;
     display: block;
     text-decoration: none; }
-    .head a img {
+    .head a img, .head .orderItem > div img {
       width: 100%; }
 
 .orderName, .orderText, .payName {
@@ -154,7 +155,7 @@ body {
     font: 0.7rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
     color: #A09F9D; }
 
-.orderItem a {
+.orderItem a, .orderItem > div {
   position: relative;
   display: block;
   padding: 3% 5%;
@@ -168,15 +169,21 @@ body {
   -webkit-box-align: center;
   justify-content: center;
   align-items: center; }
-  .orderItem a p {
+  .orderItem a p, .orderItem > div p {
     -webkit-flex: 2;
     flex: 2;
     font: 0.7rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
     color: #A09F9D; }
-    .orderItem a p:last-child {
+    .orderItem a p:last-child, .orderItem > div p:last-child {
       -webkit-flex: 4;
       flex: 4;
       color: #2F2E2B; }
+    .orderItem a p input, .orderItem > div p input {
+      border: none;
+      outline: none;
+      background: none;
+      width: 100%;
+      height: 100%; }
 
 .orderItem .item:after {
   content: "";
@@ -235,7 +242,7 @@ body {
   .orderFooter .submit, .payFooter .submit {
     -webkit-flex: 1.5;
     flex: 1.5; }
-    .orderFooter .submit a, .payFooter .submit a {
+    .orderFooter .submit a, .payFooter .submit a, .orderFooter .submit .orderItem > div, .payFooter .submit .orderItem > div {
       display: block;
       text-align: center;
       text-decoration: none;
@@ -306,6 +313,48 @@ body {
     -ms-transform: translate(0, 0);
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); }
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  -moz-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+  .mask ul {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #fff; }
+    .mask ul li {
+      font: 0.7rem/2.4rem "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #2F2E2B;
+      border-bottom: 1px solid #eee;
+      text-align: center; }
+    .mask ul .active {
+      background-color: #666;
+      color: #fff; }
+
+.roomMaskActive, .timeMaskActive {
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0); }
 
 .wrapperCoupon {
   position: fixed;

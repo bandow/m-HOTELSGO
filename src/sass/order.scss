@@ -77,8 +77,18 @@ body{
 	    		flex:4;
 	    		color:#2F2E2B;
 	    	}
+            input{
+                border:none;
+                outline:none;
+                background:none;
+                width:100%;
+                height:100%;
+            }
 	    }
 	}
+    >div{
+        @extend a;
+    }
 	.item{
 		&:after{
             content:"";
@@ -215,6 +225,39 @@ body{
     .itemisedActive{
         @include transform(translate(0,0));
     }
+}
+.mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:1;
+    background-color:rgba(0,0,0,.8);
+    @include transform(translate(-100%,0));
+    @include transition(all .5s);
+    ul{
+       position:absolute;
+       left:0;
+       bottom:0;
+       width:100%;
+       height:auto;
+       overflow:hidden;
+       background:$colorWhite;
+       li{
+            font:.7rem/2.4rem $publicFont;
+            color:#2F2E2B;
+            border-bottom:1px solid #eee;
+            text-align:center;
+        }
+        .active{
+            background-color:#666;
+            color:$colorWhite;
+        } 
+    } 
+}
+.roomMaskActive,.timeMaskActive{
+   @include transform(translate(0,0)); 
 }
 
 // coupon
