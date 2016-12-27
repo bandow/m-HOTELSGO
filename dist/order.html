@@ -13,6 +13,8 @@
 	<meta name="msapplication-tap-highlight" content="no">
 	<title>HOTELSGO酒店狗-提交订单</title>
 	<link rel="stylesheet" href="styles/order.css">
+	<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
 </head>
 <body>
 	<div class="wrapper" id="wrapper">
@@ -31,11 +33,13 @@
             <div class="orderItem">
             	<a class="item roomQuantity" href="javascript:;">
             		<p>房间数</p>
-            		<p class="quantity">1间</p>
+            		<!-- <p class="quantity">1间</p> -->
+            		<p><input type="text" placeholder="1间" id="pickerQuantity" readonly=""></p>
             	</a>
             	<a  class="item roomTime" href="javascript:;">
             		<p>留房时间</p>
-            		<p class="time">18:00</p>
+            		<!-- <p class="time">18:00</p> -->
+            		<p><input type="text" placeholder="18:00" id="pickerTime" readonly=""></p>
             	</a>
             	<div>
             		<p>入住人</p>
@@ -76,7 +80,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="roomMask mask">
+	<!-- <div class="roomMask mask">
 		<ul>
 			<li class="active">1间</li>
 			<li>2间</li>
@@ -90,7 +94,7 @@
 			<li>20:00</li>
 			<li>21:00</li>
 		</ul>
-	</div>
+	</div> -->
 	<div class="wrapperCoupon" id="wrapperCoupon">
 		<header class="couponHeader">
 		    <div class="head">
@@ -131,7 +135,10 @@
 		   </div>
 		</div>
 	</div>
-	<script src="scripts/lib/jquery-1.12.2.min.js"></script>
+	<!-- <script src="scripts/lib/jquery-1.12.2.min.js"></script> -->
+	<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
 	<script>
 	    $(document).ready(function(){
 	       //价格明细
@@ -143,27 +150,53 @@
            });
 
            //选择房数、选择时间
-           $(".roomQuantity").on("click",function(){
-               $(".roomMask").addClass("roomMaskActive");
-           });
-           $(".roomMask li").on("click",function(){
-               $(this).addClass("active").siblings().removeClass("active");
-               $(".quantity").text($(this).text());
-               $(".roomMask").removeClass("roomMaskActive");
-           });
-           $(".roomTime").on("click",function(){
-               $(".timeMask").addClass("timeMaskActive");
-           });
-           $(".timeMask li").on("click",function(){
-               $(this).addClass("active").siblings().removeClass("active");
-               $(".time").text($(this).text());
-               $(".timeMask").removeClass("timeMaskActive");
-           });
-           $(".mask").on("click",function(){
-               $(".roomMask").removeClass("roomMaskActive");
-               $(".timeMask").removeClass("timeMaskActive");
-           });
+           // $(".roomQuantity").on("click",function(){
+           //     $(".roomMask").addClass("roomMaskActive");
+           // });
+           // $(".roomMask li").on("click",function(){
+           //     $(this).addClass("active").siblings().removeClass("active");
+           //     $(".quantity").text($(this).text());
+           //     $(".roomMask").removeClass("roomMaskActive");
+           // });
+           // $(".roomTime").on("click",function(){
+           //     $(".timeMask").addClass("timeMaskActive");
+           // });
+           // $(".timeMask li").on("click",function(){
+           //     $(this).addClass("active").siblings().removeClass("active");
+           //     $(".time").text($(this).text());
+           //     $(".timeMask").removeClass("timeMaskActive");
+           // });
+           // $(".mask").on("click",function(){
+           //     $(".roomMask").removeClass("roomMaskActive");
+           //     $(".timeMask").removeClass("timeMaskActive");
+           // });
 
+           $("#pickerQuantity").picker({
+			  toolbarTemplate: '<header class="bar bar-nav">\
+			  <button class="button button-link pull-left">按钮</button>\
+			  <button class="button button-link pull-right close-picker">确定</button>\
+			  <h1 class="title">选择房间数</h1>\
+			  </header>',
+			  cols: [
+			    {
+			      textAlign: 'center',
+			      values: ['1间', '2间', '3间', '4间', '5间', '6间', '7间', '8间']
+			    }
+			  ]
+			}); 
+           $("#pickerTime").picker({
+			  toolbarTemplate: '<header class="bar bar-nav">\
+			  <button class="button button-link pull-left">按钮</button>\
+			  <button class="button button-link pull-right close-picker">确定</button>\
+			  <h1 class="title">选择时间</h1>\
+			  </header>',
+			  cols: [
+			    {
+			      textAlign: 'center',
+			      values: ['18：00', '19：00', '20：00', '21：00', '22：00', '23：00']
+			    }
+			  ]
+			});
 
            //优惠券
            $(".couponItem").on("click",function(){
