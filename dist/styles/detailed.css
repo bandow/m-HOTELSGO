@@ -65,47 +65,36 @@ html {
 @media (min-device-width: 320px) {
   html {
     font-size: 18px; } }
-
 @media (min-device-width: 360px) {
   html {
     font-size: 20px; } }
-
 @media (min-device-width: 375px) {
   html {
     font-size: 21px; } }
-
 @media (min-device-width: 384px) {
   html {
     font-size: 21px; } }
-
 @media (min-device-width: 400px) {
   html {
     font-size: 22px; } }
-
 @media (min-device-width: 414px) {
   html {
     font-size: 23px; } }
-
 @media (min-device-width: 480px) {
   html {
     font-size: 26px; } }
-
 @media (min-device-width: 568px) {
   html {
     font-size: 28px; } }
-
 @media (min-device-width: 533px) {
   html {
     font-size: 28px; } }
-
 @media (min-device-width: 600px) {
   html {
     font-size: 30px; } }
-
 @media (min-device-width: 640px) {
   html {
     font-size: 24px; } }
-
 body {
   background-color: #f5f6f7; }
 
@@ -321,23 +310,71 @@ body {
         font: 0.7rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
         color: #A09F9D; }
     .detailedList li .momey {
-      -webkit-flex: 1;
-      flex: 1; }
+      -webkit-flex: 1.7;
+      flex: 1.7;
+      text-align: center; }
+      .detailedList li .momey del {
+        font: 0.7rem/1 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        color: #666; }
       .detailedList li .momey p {
-        font: bold 0.8rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-        color: #F9163D; }
+        font: 0.6rem/1 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        color: #666;
+        font-size: .5rem; }
     .detailedList li .booking {
-      -webkit-flex: 1;
-      flex: 1; }
-      .detailedList li .booking a {
-        padding: .3rem;
-        display: block;
-        background-color: #F7AC1D;
-        font: 0.7rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-        color: #fff;
-        border-radius: 5px;
-        text-align: center;
-        text-decoration: none; }
+      position: relative;
+      -webkit-flex: .3;
+      flex: .3; }
+      .detailedList li .booking:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        margin-top: -3px;
+        width: 6px;
+        height: 6px;
+        border: 1px solid;
+        border-bottom: 0;
+        border-right: 0;
+        color: #ccc;
+        -moz-transform: rotateZ(45deg);
+        -o-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg); }
+
+.hotelList {
+  display: none;
+  background-color: #f5f6f7; }
+  .hotelList .nameList {
+    -webkit-flex: 3;
+    flex: 3; }
+    .hotelList .nameList h3 {
+      font: 0.75rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #2F2E2B; }
+    .hotelList .nameList p {
+      font: 0.7rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #A09F9D; }
+  .hotelList .momeyList {
+    -webkit-flex: 3;
+    flex: 3; }
+    .hotelList .momeyList p {
+      font: bold 0.8rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #F9163D; }
+  .hotelList .bookingList {
+    -webkit-flex: 1;
+    flex: 1; }
+    .hotelList .bookingList a {
+      padding: .3rem;
+      display: block;
+      background-color: #F7AC1D;
+      font: 0.7rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #fff;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none; }
+
+.show {
+  display: block; }
 
 .equipmentContainer {
   position: fixed;
@@ -426,3 +463,5 @@ body {
   transform: translate(-50%, 0); }
   .close img {
     width: 100%; }
+
+/*# sourceMappingURL=detailed.css.map */
