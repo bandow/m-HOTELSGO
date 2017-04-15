@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2016-10-18
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 18px; }
+
+@media (min-device-width: 320px) {
+  html {
+    font-size: 18px; } }
+@media (min-device-width: 360px) {
+  html {
+    font-size: 20px; } }
+@media (min-device-width: 375px) {
+  html {
+    font-size: 21px; } }
+@media (min-device-width: 384px) {
+  html {
+    font-size: 21px; } }
+@media (min-device-width: 400px) {
+  html {
+    font-size: 22px; } }
+@media (min-device-width: 414px) {
+  html {
+    font-size: 23px; } }
+@media (min-device-width: 480px) {
+  html {
+    font-size: 26px; } }
+@media (min-device-width: 568px) {
+  html {
+    font-size: 28px; } }
+@media (min-device-width: 533px) {
+  html {
+    font-size: 28px; } }
+@media (min-device-width: 600px) {
+  html {
+    font-size: 30px; } }
+@media (min-device-width: 640px) {
+  html {
+    font-size: 24px; } }
+body {
+  width: 100%;
+  height: 100%; }
+
+#wrapper {
+  width: 100%;
+  max-width: 640px;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden; }
+
+/*** about css begin ***/
+.wrapperAbout {
+  background: url("../images/about/about_bg.jpg") repeat-y;
+  background-size: 100% auto; }
+
+.aboutHeader, .joinHeader {
+  width: 100%;
+  height: auto;
+  font-size: 0; }
+  .aboutHeader img, .joinHeader img {
+    width: 100%; }
+
+.about, .join {
+  margin: 10% auto;
+  width: 90%; }
+  .about > img, .join > img {
+    margin: 0 10%;
+    width: 80%; }
+  .about .item, .join .item {
+    margin: 5% 0;
+    padding: 3%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px #ccc;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .about .item > img, .join .item > img {
+      width: 2rem;
+      height: 2rem; }
+    .about .item p, .join .item p {
+      margin-left: 2%;
+      font: 0.5rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+      color: #666;
+      flex: 1; }
+      .about .item p strong, .join .item p strong {
+        color: #f6ac1d;
+        font: bold 0.6rem/1.2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif; }
+
+.brandIdea {
+  padding: 2% 0;
+  background: -webkit-linear-gradient(#fbd47f, #faa76d);
+  background: linear-gradient(#fbd47f, #faa76d); }
+  .brandIdea > img {
+    margin: 5% 30%;
+    width: 40%; }
+  .brandIdea .list {
+    margin: 0 2%;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .brandIdea .list .item {
+      flex: 1;
+      background-color: #fff; }
+      .brandIdea .list .item:nth-child(2) {
+        margin: 0 2%; }
+      .brandIdea .list .item > img {
+        width: 100%; }
+      .brandIdea .list .item .text {
+        position: relative;
+        padding: 5%;
+        margin: -20% auto 0;
+        width: 90%;
+        background-color: #fff;
+        border-radius: 5px; }
+        .brandIdea .list .item .text h2 {
+          margin: 0 5%;
+          background-color: #f6ac1d;
+          border-radius: 5px;
+          font: bold 0.6rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+          color: #fff;
+          text-align: center; }
+        .brandIdea .list .item .text img {
+          width: 100%; }
+        .brandIdea .list .item .text p {
+          font: 0.5rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+          color: #91794a;
+          text-align: center; }
+
+.contactFooter {
+  padding: 5% 10%;
+  background: url("../images/about/foot_bg.jpg") no-repeat;
+  background-size: 100% auto;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; }
+  .contactFooter > div {
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center; }
+    .contactFooter > div img {
+      width: 1.5rem;
+      height: 1.5rem; }
+    .contactFooter > div .text {
+      margin-left: .3rem; }
+      .contactFooter > div .text p {
+        font: 0.6rem/1 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        color: #989898; }
+      .contactFooter > div .text a {
+        font: bold 0.6rem/1.2 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        color: #f6ac1d;
+        text-decoration: none; }
+
+/*** join css begin ***/
+.wrapperJoin {
+  background: url("../images/join/join_bg.jpg") repeat-y;
+  background-size: 100% auto; }
+
+.join h4 {
+  margin: 10% 0;
+  font: bold 0.6rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color: #666; }
+.join .item .text {
+  margin-left: .5rem;
+  flex: 1; }
+  .join .item .text h3 {
+    font: bold 0.7rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #626262; }
+  .join .item .text p {
+    font: 0.6rem/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    color: #999;
+    margin-left: 0; }
+
+.joinProcedure {
+  margin: 0 5% 2rem 5%; }
+  .joinProcedure > img {
+    width: 100%; }
+  .joinProcedure .joinLogin form {
+    margin: 0 auto;
+    width: 80%; }
+    .joinProcedure .joinLogin form label {
+      position: relative;
+      margin-bottom: .5rem;
+      width: 100%;
+      height: 1.5rem;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      background-color: #fff; }
+      .joinProcedure .joinLogin form label img {
+        height: 100%; }
+      .joinProcedure .joinLogin form label input {
+        padding: 0 5%;
+        flex: 1;
+        border: none;
+        background: none;
+        outline: none;
+        font: 0.6rem/1.5rem "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        color: #333; }
+        .joinProcedure .joinLogin form label input::-webkit-input-placeholder {
+          font: 0.6rem/1.5rem "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+          color: #999; }
+      .joinProcedure .joinLogin form label span {
+        position: absolute;
+        left: 1.8rem;
+        font: 0.6rem/1.5rem "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif; }
+    .joinProcedure .joinLogin form button {
+      display: block;
+      border: none;
+      background: none;
+      outline: none;
+      width: 100%;
+      height: 1.5rem;
+      color: #fff;
+      background-color: #f6ac1d;
+      font: bold 0.6rem/1.5rem "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif; }
+
+/*# sourceMappingURL=about.css.map */

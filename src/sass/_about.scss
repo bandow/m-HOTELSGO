@@ -1,0 +1,223 @@
+@import 'base','varable';
+body{
+    width:100%;
+    height:100%
+}
+#wrapper{
+    width: 100%;
+    max-width: 640px;
+    min-height: 100%;
+    margin: 0 auto;
+    overflow: hidden;  
+}
+/*** about css begin ***/
+.wrapperAbout{
+	background:url("../images/about/about_bg.jpg") repeat-y;
+    background-size:100% auto;
+}
+.aboutHeader{
+	width:100%;
+	height:auto;
+	font-size:0;
+	img{
+		width:100%;
+	}
+}
+.about{
+	margin:10% auto;
+	width:90%;
+	>img{
+		margin:0 10%;
+		width:80%;
+	}
+	.item{
+		margin:5% 0;
+		padding:3%;
+		background-color:$colorWhite;
+		border:1px solid #ccc;
+		border-radius:5px;
+		box-shadow:1px 2px 5px #ccc;
+		display:-webkit-flex;
+		display:flex;
+		align-items:center;
+		>img{
+			width:2rem;
+			height:2rem;
+		}
+		p{
+			margin-left:2%;
+			font:.5rem/1.5 $publicFont;
+        	color:#666;
+    	    flex: 1;
+        	strong{
+        		color:#f6ac1d;
+        		font:bold .6rem/1.2 $publicFont;
+        	}
+		}
+	}
+}
+.brandIdea{
+	padding:2% 0;
+	background: -webkit-linear-gradient(#fbd47f, #faa76d); 
+	background: linear-gradient(#fbd47f, #faa76d); 
+	>img{
+		margin:5% 30%;
+		width:40%;
+	}
+	.list{
+		margin:0 2%;
+		display:-webkit-flex;
+		display:flex;
+		align-items:center;
+		.item{
+			flex:1;
+			background-color:$colorWhite;
+			&:nth-child(2){
+				margin:0 2%;
+			}
+			>img{
+				width:100%;
+			}
+			.text{
+			    position: relative;
+			    padding:5%;
+				margin:-20% auto 0;
+				width:90%;
+				background-color:$colorWhite;
+				border-radius:5px;
+				h2{
+					margin:0 5%;
+					background-color:#f6ac1d;
+					border-radius:5px;
+					font:bold .6rem/1.5 $publicFont;
+					color:#fff;
+					text-align:center;
+				}
+				img{
+					width:100%;
+				}
+				p{
+					font:.5rem/1.5 $publicFont;
+					color:#91794a;
+					text-align:center;
+				}
+			}
+		}
+	}
+}
+.contactFooter{
+	padding:5% 10%;
+	background:url("../images/about/foot_bg.jpg") no-repeat;
+	background-size:100% auto;
+	display:-webkit-flex;
+	display:flex;
+	align-items:center;
+	>div{
+		flex:1;
+		display:-webkit-flex;
+		display:flex;
+		align-items:center;
+		img{
+			width:1.5rem;
+			height:1.5rem;
+		}
+		.text{
+			margin-left:.3rem;
+			p{
+				font:.6rem/1 $publicFont;
+				color:#989898;
+			}
+			a{
+				font:bold .6rem/1.2 $publicFont;
+				color:#f6ac1d;
+				text-decoration:none;
+			}
+		}	
+	}
+}
+/*** join css begin ***/
+.wrapperJoin{
+	background:url("../images/join/join_bg.jpg") repeat-y;
+    background-size:100% auto;
+}
+.joinHeader{
+	@extend .aboutHeader;
+}
+.join{
+	@extend .about;
+	h4{
+		margin:10% 0;
+		font:bold .6rem/1.5 $publicFont;
+		color:#666;
+	}
+	.item{
+		.text{
+			margin-left:.5rem;
+			flex:1;
+			h3{
+				font:bold .7rem/1.5 $publicFont;
+				color:#626262;
+			}
+			p{
+				font:.6rem/1.5 $publicFont;
+				color:#999;
+				margin-left:0;
+			}
+		}
+	}
+}
+.joinProcedure{
+	margin:0 5% 2rem 5%;
+	>img{
+		width:100%;
+	}
+	.joinLogin{
+		form{
+			margin:0 auto;
+			width:80%;
+			label{
+				position:relative;
+				margin-bottom:.5rem;
+				width:100%;
+				height:1.5rem;
+				display:-webkit-flex;
+				display:flex;
+				align-items:center;
+				border:1px solid #ddd;
+				background-color:#fff;
+				img{
+					height:100%;
+				}
+				input{
+					padding:0 5%;
+					flex:1;
+					border:none;
+					background:none;
+					outline:none;
+					font:.6rem/1.5rem $publicFont;
+					color:#333;
+					&::-webkit-input-placeholder{
+						font:.6rem/1.5rem $publicFont;
+						color:#999;
+					}
+				}
+				span{
+					position:absolute;
+					left:1.8rem;
+					font:.6rem/1.5rem $publicFont;
+				}
+			}
+			button{
+				display:block;
+				border:none;
+				background:none;
+				outline:none;
+				width:100%;
+				height:1.5rem;
+				color:#fff;
+				background-color:#f6ac1d;
+				font:bold .6rem/1.5rem $publicFont;
+			}
+		}
+	}
+}
