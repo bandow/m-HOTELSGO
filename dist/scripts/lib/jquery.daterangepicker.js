@@ -1912,6 +1912,7 @@
 
 				//add real-today
 				// $(".real-today").find("span").css({color:"red",fontWeight:"bold"});
+				
 
 
 			});
